@@ -1,3 +1,8 @@
+import Entities.Epic;
+import Entities.SubTask;
+import Entities.TaskStatus;
+import Managers.TaskManager;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,7 +18,7 @@ public class Main {
         int epic2Id = taskManager.addEpic(epic2);
         taskManager.addSubTask(subTask2, epic2Id);
         int subTask3Id = taskManager.addSubTask(subTask3, epic2Id);
-        subTask3.status = TaskStatus.IN_PROGRESS;
+        subTask3.setStatus(TaskStatus.IN_PROGRESS);
         taskManager.replaceSubTaskById(subTask3Id, subTask3);
 
         System.out.println(taskManager.getAllEpics());

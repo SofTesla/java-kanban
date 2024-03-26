@@ -1,3 +1,5 @@
+package Entities;
+
 public enum TaskStatus {
     NEW,
     IN_PROGRESS,
