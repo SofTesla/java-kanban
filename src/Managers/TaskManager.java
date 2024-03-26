@@ -115,9 +115,9 @@ public class TaskManager {
 
     public void deleteSubTaskById(int id) {
         Epic epic = subTasks.get(id).getEpic();
-        updateEpicStatus(epic);
         epic.getSubTasks().remove(id);
         subTasks.remove(id);
+        updateEpicStatus(epic);
     }
 
     public void replaceTaskById(int id, Task task) {
