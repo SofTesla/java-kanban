@@ -7,8 +7,8 @@ public class SubTask extends Task {
         return epic;
     }
 
-    public SubTask(String name, String description, TaskStatus status) {
-        super(name, description, status);
+    public SubTask(String name, String description, TaskStatus status, int id) {
+        super(name, description, status, id);
     }
 
     public void setEpic(Epic epic) {

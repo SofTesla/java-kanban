@@ -1,5 +1,7 @@
 package Entities;
 
+import java.util.Objects;
+
 public class Task {
     protected String name;
     protected String description;
@@ -22,10 +24,11 @@ public class Task {
         this.status = status;
     }
 
-    public Task(String name, String description, TaskStatus status) {
+    public Task(String name, String description, TaskStatus status, int id) {
         this.name = name;
         this.description = description;
         this.status = status;
+        this.id = id;
     }
 
     public String getName() {
@@ -52,5 +55,16 @@ public class Task {
                 ", id=" + id +
                 ", status=" + status +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Task task = (Task)obj;
+        return Objects.equals(this.name, task.name)
+                && Objects.equals(this.description, task.description)
+                && Objects.equals(this.status, task.status)
+                && Objects.equals(this.id, task.id);
     }
 }

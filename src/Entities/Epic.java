@@ -11,8 +11,8 @@ public class Epic extends Task {
         return subTasks;
     }
 
-    public Epic(String name, String description) {
-        super(name, description, TaskStatus.NEW);
+    public Epic(String name, String description, int id) {
+        super(name, description, TaskStatus.NEW, id);
         this.subTasks = new HashMap<>();
     }
 
