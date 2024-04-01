@@ -25,7 +25,7 @@ public class InMemoryTaskManager implements TaskManager {
         this.historyManager = historyManager;
     }
 
-    @Override
+
     public int getNewId() {
         return ++lastId;
     }
@@ -199,6 +199,9 @@ public class InMemoryTaskManager implements TaskManager {
             epic.setStatus(TaskStatus.IN_PROGRESS);
         }
     }
-
+@Override
+public ArrayList<Task> getHistory() {
+    return historyManager.getHistory();
+}
 
 }

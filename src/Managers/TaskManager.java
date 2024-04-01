@@ -7,7 +7,6 @@ import Entities.Task;
 import java.util.ArrayList;
 
 public interface TaskManager {
-    int getNewId();
 
     int addTask(Task task);
 
@@ -46,6 +45,8 @@ public interface TaskManager {
     void replaceSubTaskById(int id, SubTask subTask);
 
     ArrayList<SubTask> getSubTasksByEpicId(int id);
+
+    ArrayList<Task> getHistory();
 
 
 }
